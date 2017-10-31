@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/princess" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at sapien et nunc facilisis tincidunt at nec urna. Pellentesque augue tortor, finibus in fringilla non, fringilla non erat. Sed at turpis nec ante accumsan ornare vel sed turpis. Cras ut tellus iaculis, ornare lectus quis, interdum tellus. Maecenas eget sapien ut elit consectetur molestie ac lobortis ante. Aliquam finibus malesuada auctor. Integer hendrerit, diam commodo elementum facilisis, lectus tellus tincidunt purus, non scelerisque urna leo ac orci."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+</android.support.constraint.ConstraintLayout>

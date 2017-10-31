@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.loginexam.MainActivity">
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일을 입력하세요"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="패스워드를 입력하세요"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/save_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이메일 저장" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인" />
+
+</LinearLayout>
+

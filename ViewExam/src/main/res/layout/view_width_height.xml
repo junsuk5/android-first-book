@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- layout_width, layout_height 속성 -->
+    <TextView
+        android:id="@+id/hello_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ff0000"
+        android:text="Hello World" />
+
+    <TextView
+        android:text="안녕하세요"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

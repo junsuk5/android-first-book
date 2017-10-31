@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffff00"
+        android:minLines="2"
+        android:text="동해물과 백두산이 마르고 닳도록" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#ffff00"
+        android:maxLines="3"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque leo urna, vestibulum euismod arcu interdum cursus. Curabitur molestie tellus ut odio pellentesque mollis. Morbi sit amet tempor purus. Sed pretium sit amet diam vel rutrum. Mauris rutrum mollis efficitur. Nullam lorem justo, varius dignissim justo sit amet, dapibus cursus enim. Quisque dignissim lacinia elit non consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed auctor ligula sit amet euismod ultricies. Donec faucibus, nulla nec iaculis pellentesque, enim felis sollicitudin nisi, id sollicitudin nulla turpis at ipsum. Vestibulum ut malesuada eros. Suspendisse suscipit risus magna, ut sagittis nulla varius eget. Suspendisse potenti. Pellentesque ex est, faucibus id dictum ac, egestas vel neque. Nulla facilisi. Aliquam vel hendrerit tellus." />
+
+</LinearLayout>

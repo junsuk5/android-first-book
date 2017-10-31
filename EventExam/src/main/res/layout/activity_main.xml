@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.eventexam.MainActivity">
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffebee"
+        android:text="onClick, onLongClick" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="onFocusChanged, onKey" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="onFocusChanged, onKey" />
+
+    <TextView
+        android:id="@+id/event_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff59d" />
+
+</LinearLayout>

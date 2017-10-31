@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_source"
+            android:title="예제 소스" />
+        <item
+            android:id="@+id/nav_book"
+            android:title="책 구매하기" />
+        <item
+            android:id="@+id/nav_facebook"
+            android:title="페이스북 페이지" />
+        <item
+            android:id="@+id/nav_publisher"
+            android:title="출판사" />
+    </group>
+
+    <item android:title="수원스마트앱개발학원">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:title="홈페이지" />
+            <item
+                android:id="@+id/nav_location"
+                android:title="위치" />
+            <item
+                android:id="@+id/nav_phone"
+                android:title="전화걸기" />
+        </menu>
+    </item>
+
+</menu>

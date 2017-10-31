@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LocalizationExam</string>
+    <string name="greeting">안녕하세요</string>
+</resources>

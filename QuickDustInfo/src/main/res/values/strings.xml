@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quick Dust</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="action_settings" translatable="false">Settings</string>
+</resources>
