@@ -21,6 +21,7 @@ public class ExitDialogFragment extends DialogFragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // 종료 처리
+                getActivity().finish();
             }
         });
         builder.setNegativeButton("취소", null);
