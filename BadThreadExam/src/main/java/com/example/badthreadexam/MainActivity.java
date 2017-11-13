@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 스레드 시작
     public void startThread(View view) {
-        if (mThread != null) {
+        if (mThread == null) {
             // 스레드 초기화 및 시작
             mThread = new Thread("My Thread ") {
                 @Override

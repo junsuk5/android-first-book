@@ -42,12 +42,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         ListView listView = (ListView) findViewById(R.id.memo_list);
 
-        MemoDbHelper dbHelper = MemoDbHelper.getInstance(this);
-        Cursor cursor = dbHelper.getReadableDatabase()
-                .query(MemoContract.MemoEntry.TABLE_NAME,
-                        null, null, null, null, null, null);
+//        MemoDbHelper dbHelper = MemoDbHelper.getInstance(this);
+//        Cursor cursor = dbHelper.getReadableDatabase()
+//                .query(MemoContract.MemoEntry.TABLE_NAME,
+//                        null, null, null, null, null, null);
 
-        mAdapter = new MemoAdapter(this, cursor);
+        mAdapter = new MemoAdapter(this, null);
         listView.setAdapter(mAdapter);
 
         // 리스트 클릭시 메모 내용 표시

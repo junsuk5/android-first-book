@@ -34,7 +34,7 @@ public class MyCursorAdapter extends CursorAdapter {
                 (cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA));
 
         // 사진을 이미지뷰에 표시하기
-        // imageView.setImageURI(Uri.parse(uri));
+//         imageView.setImageURI(Uri.parse(uri));
         Glide.with(context).load(uri).into(imageView);
     }
 }
