@@ -1,11 +1,14 @@
 package com.example.serviceexam;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
+import android.os.Build;
 import android.os.IBinder;
-import android.support.v7.app.NotificationCompat;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 public class MyService extends Service {
@@ -45,7 +48,7 @@ public class MyService extends Service {
             };
             mThread.start();
         }
-        return START_STICKY;
+        return START_NOT_STICKY;
     }
 
     @Override
@@ -95,14 +98,20 @@ public class MyService extends Service {
     }
 
     private void startForegroundService() {
-        // 알림 생성
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        // default 채널 ID로 알림 생성
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "default");
         builder.setSmallIcon(R.mipmap.ic_launcher);
         builder.setContentTitle("포그라운드 서비스");
         builder.setContentText("포그라운드 서비스 실행 중");
         Intent notificationIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
         builder.setContentIntent(pendingIntent);
+
+        // 오레오에서는 알림 채널을 매니저에 생성해야 한다
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.createNotificationChannel(new NotificationChannel("default", "기본 채널", NotificationManager.IMPORTANCE_DEFAULT));
+        }
 
         // 포그라운드로 시작
         startForeground(1, builder.build());
