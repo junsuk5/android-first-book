@@ -6,15 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String TAG = MainActivity.class.getSimpleName();
 
     private ListView mWeatherListView;
 
@@ -29,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
         new HttpAsyncTask().execute("https://goo.gl/eIXu9l");
     }
 
-    private static class HttpAsyncTask extends AsyncTask<String, Void, String> {
+    private class HttpAsyncTask extends AsyncTask<String, Void, List<Weather>> {
+        private final String TAG = HttpAsyncTask.class.getSimpleName();
+
         // OkHttp 클라이언트
         OkHttpClient client = new OkHttpClient();
 
         @Override
-        protected String doInBackground(String... params) {
-            String result = null;
-
+        protected List<Weather> doInBackground(String... params) {
+            List<Weather> weatherList = new ArrayList<>();
             String strUrl = params[0];
-
             try {
                 // 요청
                 Request request = new Request.Builder()
@@ -46,23 +50,32 @@ public class MainActivity extends AppCompatActivity {
                         .build();
                 // 응답
                 Response response = client.newCall(request).execute();
-                Log.d(TAG, "onCreate: " + response.body().string());
+
+                Gson gson = new Gson();
+
+                // import java.lang.reflect.Type
+                Type listType = new TypeToken<ArrayList<Weather>>() {
+                }.getType();
+                weatherList = gson.fromJson(response.body().string(), listType);
+
+                Log.d(TAG, "onCreate: " + weatherList.toString());
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            return result;
+            return weatherList;
         }
 
         @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
+        protected void onPostExecute(List<Weather> weatherList) {
+            super.onPostExecute(weatherList);
 
-            if (s != null) {
-                Log.d("HttpAsyncTask", s);
+            if (weatherList != null) {
+                Log.d("HttpAsyncTask", weatherList.toString());
+                WeatherAdapter adapter = new WeatherAdapter(weatherList);
+                mWeatherListView.setAdapter(adapter);
             }
         }
     }
-
 
 }
