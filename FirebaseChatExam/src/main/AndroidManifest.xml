@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".SignInActivity" />
 
+        <!-- FCM 메시지 수신 서비스 -->
         <service
             android:name=".MyFcmService"
             android:exported="false">
@@ -25,6 +26,21 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <!-- FCM 알림에 표시할 기본 아이콘 -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <!-- FCM 알림에 표시할 기본 색상 -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <!-- FCM 기본 채널 ID 설정. 오레오 이상 필수 -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="default_channel_id" />
     </application>
 
 </manifest>

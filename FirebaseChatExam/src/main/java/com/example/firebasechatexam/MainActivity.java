@@ -88,26 +88,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Firebase Remote Config 초기화
-        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
-
-        // Firebase Remote Config 설정
-        FirebaseRemoteConfigSettings firebaseRemoteConfigSettings =
-                new FirebaseRemoteConfigSettings.Builder()
-                        .setDeveloperModeEnabled(true)
-                        .build();
-
-        // 인터넷 연결이 안 되었을 때 기본 값 정의
-        Map<String, Object> defaultConfigMap = new HashMap<>();
-        defaultConfigMap.put("message_length", 10L);
-
-        // 설정과 기본 값 설정
-        mFirebaseRemoteConfig.setConfigSettings(firebaseRemoteConfigSettings);
-        mFirebaseRemoteConfig.setDefaults(defaultConfigMap);
-
-        // 원격 구성 가져오기
-        fetchConfig();
-
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
         if (mFirebaseUser == null) {
@@ -172,8 +152,29 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         };
 
+        // 리사이클러뷰에 레이아웃 매니저와 어댑터 설정
         mMessageRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mMessageRecyclerView.setAdapter(mFirebaseAdapter);
+
+        // Firebase Remote Config 초기화
+        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+
+        // Firebase Remote Config 설정
+        FirebaseRemoteConfigSettings firebaseRemoteConfigSettings =
+                new FirebaseRemoteConfigSettings.Builder()
+                        .setDeveloperModeEnabled(true)
+                        .build();
+
+        // 인터넷 연결이 안 되었을 때 기본 값 정의
+        Map<String, Object> defaultConfigMap = new HashMap<>();
+        defaultConfigMap.put("message_length", 10L);
+
+        // 설정과 기본 값 설정
+        mFirebaseRemoteConfig.setConfigSettings(firebaseRemoteConfigSettings);
+        mFirebaseRemoteConfig.setDefaults(defaultConfigMap);
+
+        // 원격 구성 가져오기
+        fetchConfig();
     }
 
     @Override
