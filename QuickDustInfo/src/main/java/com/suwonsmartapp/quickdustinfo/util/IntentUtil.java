@@ -10,15 +10,15 @@ import android.net.Uri;
 public class IntentUtil {
     // 소스 코드
     public static Intent getSourceCodeIntent() {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/junsuk5/androidcheat"));
+        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/junsuk5/android-first"));
     }
 
     public static Intent getBuyBookIntent() {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.yes24.com/24/Goods/45506284?Acode=101"));
+        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.yes24.com/"));
     }
 
     public static Intent getFacebookPageIntent() {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/suwonsmartapp/?ref=bookmarks"));
+        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/suwonsmartapp"));
     }
 
     public static Intent getPublisherIntent() {
