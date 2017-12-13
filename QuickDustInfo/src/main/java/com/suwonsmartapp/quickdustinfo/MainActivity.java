@@ -201,16 +201,20 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_all_delete) {
-            mRealm.beginTransaction();
-            mRealm.where(LocationRealmObject.class).findAll().deleteAllFromRealm();
-            mRealm.commitTransaction();
-            setUpViewPager();
+            if (mTabLayout.getTabCount() > 1) {
+                mRealm.beginTransaction();
+                mRealm.where(LocationRealmObject.class).findAll().deleteAllFromRealm();
+                mRealm.commitTransaction();
+                setUpViewPager();
+            }
             return true;
         } else if (id == R.id.action_delete) {
-            mRealm.beginTransaction();
-            mRealm.where(LocationRealmObject.class).findAll().get(mTabLayout.getSelectedTabPosition() - 1).deleteFromRealm();
-            mRealm.commitTransaction();
-            setUpViewPager();
+            if (mTabLayout.getTabCount() > 1) {
+                mRealm.beginTransaction();
+                mRealm.where(LocationRealmObject.class).findAll().get(mTabLayout.getSelectedTabPosition() - 1).deleteFromRealm();
+                mRealm.commitTransaction();
+                setUpViewPager();
+            }
             return true;
         }
 
