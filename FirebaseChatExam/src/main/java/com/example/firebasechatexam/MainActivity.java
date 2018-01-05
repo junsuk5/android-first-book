@@ -9,9 +9,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputFilter;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.appinvite.AppInvite;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.auth.api.Auth;
@@ -30,6 +33,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -131,24 +135,36 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         });
 
+        // 쿼리 수행 위치
+        Query query = mFirebaseDatabaseReference.child(MESSAGES_CHILD);
 
-        mFirebaseAdapter = new FirebaseRecyclerAdapter<ChatMessage, MessageViewHolder>(
-                ChatMessage.class,
-                R.layout.item_message,
-                MessageViewHolder.class,
-                mFirebaseDatabaseReference.child(MESSAGES_CHILD)) {
+        // 옵션
+        FirebaseRecyclerOptions<ChatMessage> options =
+                new FirebaseRecyclerOptions.Builder<ChatMessage>()
+                        .setQuery(query, ChatMessage.class)
+                        .build();
+
+        // 어댑터
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<ChatMessage, MessageViewHolder>(options) {
             @Override
-            protected void populateViewHolder(MessageViewHolder viewHolder, ChatMessage model, int position) {
-                viewHolder.messageTextView.setText(model.getText());
-                viewHolder.messengerTextView.setText(model.getName());
+            protected void onBindViewHolder(MessageViewHolder holder, int position, ChatMessage model) {
+                holder.messageTextView.setText(model.getText());
+                holder.messengerTextView.setText(model.getName());
                 if (model.getPhotoUrl() == null) {
-                    viewHolder.messengerImageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,
+                    holder.messengerImageView.setImageDrawable(ContextCompat.getDrawable(MainActivity.this,
                             R.drawable.ic_account_circle_black_24dp));
                 } else {
                     Glide.with(MainActivity.this)
                             .load(model.getPhotoUrl())
-                            .into(viewHolder.messengerImageView);
+                            .into(holder.messengerImageView);
                 }
+            }
+
+            @Override
+            public MessageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.item_message, parent, false);
+                return new MessageViewHolder(view);
             }
         };
 
@@ -175,6 +191,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         // 원격 구성 가져오기
         fetchConfig();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // FirebaseRecyclerAdapter 실시간 쿼리 시작
+        mFirebaseAdapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // FirebaseRecyclerAdapter 실시간 쿼리 중지
+        mFirebaseAdapter.stopListening();
     }
 
     @Override
