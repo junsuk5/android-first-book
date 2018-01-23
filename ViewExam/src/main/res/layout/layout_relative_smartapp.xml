@@ -55,14 +55,6 @@
         android:text="위쪽"
         android:textSize="32sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/hello_text"
-        android:layout_alignParentEnd="true"
-        android:background="#8b9189"
-        android:text="위"
-        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/hello_text"
@@ -72,6 +64,15 @@
         android:layout_alignParentEnd="true"
         android:background="#38cd0f"
         android:text="Hello"
+        android:textSize="32sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/hello_text"
+        android:layout_alignParentEnd="true"
+        android:background="#8b9189"
+        android:text="위"
         android:textSize="32sp" />
 
     <TextView
