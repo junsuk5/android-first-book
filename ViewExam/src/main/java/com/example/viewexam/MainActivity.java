@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_relative_smartapp);
+        setContentView(R.layout.activity_main);
 
 //        setContentView(R.layout.button);
 //        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {

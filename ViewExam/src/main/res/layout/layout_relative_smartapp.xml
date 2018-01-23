@@ -55,7 +55,6 @@
         android:text="위쪽"
         android:textSize="32sp" />
 
-
     <TextView
         android:id="@+id/hello_text"
         android:layout_width="wrap_content"
