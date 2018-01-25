@@ -1,4 +1,4 @@
-package com.example.httpnetworkexam;
+package com.example.okhttpexam;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

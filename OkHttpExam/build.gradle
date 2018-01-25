@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.example.httpnetworkexam"
+        applicationId "com.example.okhttpexam"
         minSdkVersion 21
         targetSdkVersion 22
         versionCode 1

@@ -1,10 +1,12 @@
-package com.example.httpnetworkexam;
+package com.example.okhttpexam;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.example.httpnetworkexam.R;
 
 import java.util.List;
 

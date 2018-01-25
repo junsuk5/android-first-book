@@ -1,4 +1,4 @@
-package com.example.httpnetworkexam;
+package com.example.okhttpexam;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 
+import com.example.httpnetworkexam.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

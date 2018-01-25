@@ -1,4 +1,4 @@
-package com.example.httpnetworkexam;
+package com.example.okhttpexam;
 
 public class Weather {
     private String country;
