@@ -191,6 +191,38 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         // 원격 구성 가져오기
         fetchConfig();
+
+        // 새로운 글이 추가되면 제일 하단으로 포지션 이동
+        mFirebaseAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+            @Override
+            public void onItemRangeInserted(int positionStart, int itemCount) {
+                super.onItemRangeInserted(positionStart, itemCount);
+                int friendlyMessageCount = mFirebaseAdapter.getItemCount();
+                LinearLayoutManager layoutManager = (LinearLayoutManager) mMessageRecyclerView.getLayoutManager();
+                int lastVisiblePosition = layoutManager.findLastCompletelyVisibleItemPosition();
+
+                if (lastVisiblePosition == -1 ||
+                        (positionStart >= (friendlyMessageCount - 1) &&
+                                lastVisiblePosition == (positionStart - 1))) {
+                    mMessageRecyclerView.scrollToPosition(positionStart);
+                }
+            }
+        });
+
+        // 키보드 올라올 때 RecyclerView의 위치를 마지막 포지션으로 이동
+        mMessageRecyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                if (bottom < oldBottom) {
+                    v.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            mMessageRecyclerView.smoothScrollToPosition(mFirebaseAdapter.getItemCount());
+                        }
+                    }, 100);
+                }
+            }
+        });
     }
 
     @Override
