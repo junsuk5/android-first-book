@@ -6,8 +6,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.httpnetworkexam.R;
-
 import java.util.List;
 
 public class WeatherAdapter extends BaseAdapter {
