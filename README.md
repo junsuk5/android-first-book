@@ -4,6 +4,7 @@
 
 * [Yes24](http://www.yes24.com/24/goods/59298937?scode=032&OzSrank=1)
 * [알라딘](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=137817656)
+* [교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791186710289&orderClick=LAG&Kc=)
 * [반디앤루니스](http://www.bandinlunis.com/front/product/detailProduct.do?prodId=4158780)
 * [인터파크](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=281409749&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
