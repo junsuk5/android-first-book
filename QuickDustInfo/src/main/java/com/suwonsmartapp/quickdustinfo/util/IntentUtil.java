@@ -18,7 +18,7 @@ public class IntentUtil {
     }
 
     public static Intent getFacebookPageIntent() {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/suwonsmartapp"));
+        return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/untilandroid"));
     }
 
     public static Intent getPublisherIntent() {
@@ -30,11 +30,11 @@ public class IntentUtil {
     }
 
     public static Intent getLocationIntent() {
-        return new Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.274105,127.02262100000007(수원스마트앱개발학원)?z=11"));
+        return new Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.274105,127.02262100000007(세민직업전문학교)?z=11"));
     }
 
     public static Intent getDialPhoneIntent() {
-        return new Intent(Intent.ACTION_DIAL, Uri.parse("tel:031-236-5043"));
+        return new Intent(Intent.ACTION_DIAL, Uri.parse("tel:031-236-5040"));
     }
 
 

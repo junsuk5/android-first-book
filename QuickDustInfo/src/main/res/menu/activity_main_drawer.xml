@@ -18,7 +18,7 @@
             android:title="출판사" />
     </group>
 
-    <item android:title="수원스마트앱개발학원">
+    <item android:title="저자와의 소통">
         <menu>
             <item
                 android:id="@+id/nav_home"
