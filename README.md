@@ -11,5 +11,12 @@
 ## 예제 코드 실행 방법
 하나의 프로젝트에 예제가 각각의 모듈로 되어있습니다. 안드로이드 스튜디오에서 프로젝트를 Open하고 실행하고 싶은 모듈을 선택하여 실행합니다.
 
-## 예제 라이브 코딩 해설 동영상
+## 예제 라이브 코딩 및 A/S
 * [유튜브](https://www.youtube.com/playlist?list=PLxTmPHxRH3VWTd-8KB67Itegihkl4SVKe)
+* [페이스북](https://www.facebook.com/untilandroid)
+
+## 오탈자 및 오류
+* 554쪽 Google Play services와 연결하기
+
+   - 과거에는 위치정보를 얻기 위해 GoogleApiClient가 필요했었는데 최근에는 FusedLocationProvider를 사용하게 되면서 필요없게 되었기 때문에 해당 절은 필요 없는 부분입니다. 관련된 코드는 작성하지 않아도 됩니다.
+
