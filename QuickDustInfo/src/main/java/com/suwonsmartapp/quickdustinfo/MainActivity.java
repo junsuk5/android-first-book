@@ -201,20 +201,20 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_all_delete) {
-            if (mTabLayout.getTabCount() > 1) {
-                mRealm.beginTransaction();
-                mRealm.where(LocationRealmObject.class).findAll().deleteAllFromRealm();
-                mRealm.commitTransaction();
-                setUpViewPager();
-            }
+            mRealm.beginTransaction();
+            mRealm.where(LocationRealmObject.class).findAll().deleteAllFromRealm();
+            mRealm.commitTransaction();
+            setUpViewPager();
             return true;
         } else if (id == R.id.action_delete) {
-            if (mTabLayout.getTabCount() > 1) {
-                mRealm.beginTransaction();
-                mRealm.where(LocationRealmObject.class).findAll().get(mTabLayout.getSelectedTabPosition() - 1).deleteFromRealm();
-                mRealm.commitTransaction();
-                setUpViewPager();
+            if (mTabLayout.getSelectedTabPosition() == 0) {
+                Toast.makeText(this, "현재 위치 탭은 삭제할 수 없습니다", Toast.LENGTH_SHORT).show();
+                return true;
             }
+            mRealm.beginTransaction();
+            mRealm.where(LocationRealmObject.class).findAll().get(mTabLayout.getSelectedTabPosition() - 1).deleteFromRealm();
+            mRealm.commitTransaction();
+            setUpViewPager();
             return true;
         }
 
