@@ -42,5 +42,5 @@
   
   
 * 806쪽 상단 소스의 조건식 수정
-  - mTabLayout.getSelectedTabPosition() - 1 < 0 을 mTabLayout.getSelectedTabPosition == 0 으로 수정
+  - mTabLayout.getSelectedTabPosition() - 1 < 0 을 mTabLayout.getSelectedTabPosition() == 0 으로 수정
 
