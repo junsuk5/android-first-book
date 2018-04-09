@@ -28,6 +28,10 @@
 * 120쪽 닥 -> 바닥
   - 텍스트뷰의 영역에서 '바'닥에 중력이 작용하는 것이지요.
  
+
+* 282쪽 액티비티에서 프래그먼트에 접근하는 예 코드에서
+  - getFragmentManager() => getSupportFragmentManager() 로 수정
+
  
 * 554쪽 Google Play services와 연결하기 부분 삭제 
   - 과거에는 위치정보를 얻기 위해 GoogleApiClient가 필요했었는데 최근에는 FusedLocationProvider를 사용하게 되면서 필요없게 되었기 때문에 해당 절은 필요 없는 부분입니다. 관련된 코드 또한 작성하지 않아도 됩니다.
