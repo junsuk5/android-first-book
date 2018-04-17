@@ -36,6 +36,9 @@
 * 282쪽 액티비티에서 프래그먼트에 접근하는 예 코드에서
   - getFragmentManager() => getSupportFragmentManager() 로 수정
   
+* 369쪽 상단 소스 제목
+  - [ContentResolver를 통해 데이터를 얻는 예]
+  
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
 
