@@ -27,11 +27,14 @@
 
 * 120쪽 닥 -> 바닥
   - 텍스트뷰의 영역에서 '바'닥에 중력이 작용하는 것이지요.
- 
+  
+  
+* 266쪽 12.3.3. 제목
+  - 깅제 종료 및 실행 => 강제 종료 및 실행
+  
 
 * 282쪽 액티비티에서 프래그먼트에 접근하는 예 코드에서
   - getFragmentManager() => getSupportFragmentManager() 로 수정
-  
   
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
