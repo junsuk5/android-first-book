@@ -127,10 +127,16 @@ public class FineDustFragment extends Fragment implements FineDustContract.View 
 
     @Override
     public void showFineDustResult(FineDust fineDust) {
-        mLocationTextView.setText(fineDust.getWeather().getDust().get(0).getStation().getName());
-        mTimeTextView.setText(fineDust.getWeather().getDust().get(0).getTimeObservation());
-        mDustTextView.setText(fineDust.getWeather().getDust().get(0).getPm10().getValue() + " ㎍/㎥, "
-                + fineDust.getWeather().getDust().get(0).getPm10().getGrade());
+        try {
+            mLocationTextView.setText(fineDust.getWeather().getDust().get(0).getStation().getName());
+            mTimeTextView.setText(fineDust.getWeather().getDust().get(0).getTimeObservation());
+            mDustTextView.setText(fineDust.getWeather().getDust().get(0).getPm10().getValue() + " ㎍/㎥, "
+                    + fineDust.getWeather().getDust().get(0).getPm10().getGrade());
+        } catch (Exception e) {
+            mLocationTextView.setText("일일 허용량 초과");
+            mTimeTextView.setText("일일 허용량 초과");
+            mDustTextView.setText("일일 허용량 초과");
+        }
     }
 
     @Override
