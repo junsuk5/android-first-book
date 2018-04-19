@@ -13,9 +13,9 @@ import retrofit2.http.Query;
  */
 
 public interface FineDustApi {
-    String BASE_URL = "http://apis.skplanetx.com/";
+    String BASE_URL = "http://api.weatherplanet.co.kr/";
 
-    @Headers("appKey: d39d6ed5-38b2-3205-b7f2-db02ea0ecf3a")
+    @Headers("appKey: 6b200e091d1a4d7e83fb9b4732809b33")
     // 쿼리
     @GET("weather/dust?version=1")
     Call<FineDust> getFineDust(@Query("lat") double latitude,
