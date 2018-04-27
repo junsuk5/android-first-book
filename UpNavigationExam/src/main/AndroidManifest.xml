@@ -19,7 +19,7 @@
         <activity android:name="com.example.upnavigationexam.ParentActivity"
             android:parentActivityName="com.example.upnavigationexam.MainActivity" />
         <activity android:name="com.example.upnavigationexam.ChildActivity"
-            android:parentActivityName="com.example.upnavigationexam.ChildActivity" />
+            android:parentActivityName="com.example.upnavigationexam.ParentActivity" />
     </application>
 
 </manifest>
