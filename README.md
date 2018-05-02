@@ -35,6 +35,10 @@
 
 * 189쪽 하단 단락에 Select에 S 누락
   - elect Methods to ... -> Select Methods to
+ 
+ 
+* 233쪽 하단 소스에 오타
+  - mWeatherImagaMap -> mWeatherImageMap 으로 수정
   
  
 * 266쪽 12.3.3. 제목
