@@ -18,19 +18,19 @@ import java.util.Map;
 public class MyFirstAdapter extends BaseAdapter {
     private final List<Weather> mData;
 
-    private Map<String, Integer> mWeatherImagaMap;
+    private Map<String, Integer> mWeatherImageMap;
 
 
     // List 를 구현한 모든 것(ArrayList 등) 을 받는 생성자
     public MyFirstAdapter(List<Weather> data) {
         mData = data;
 
-        mWeatherImagaMap = new HashMap<>();
-        mWeatherImagaMap.put("맑음", R.drawable.sunny);
-        mWeatherImagaMap.put("폭설", R.drawable.blizzard);
-        mWeatherImagaMap.put("구름", R.drawable.cloudy);
-        mWeatherImagaMap.put("비", R.drawable.rainy);
-        mWeatherImagaMap.put("눈", R.drawable.snow);
+        mWeatherImageMap = new HashMap<>();
+        mWeatherImageMap.put("맑음", R.drawable.sunny);
+        mWeatherImageMap.put("폭설", R.drawable.blizzard);
+        mWeatherImageMap.put("구름", R.drawable.cloudy);
+        mWeatherImageMap.put("비", R.drawable.rainy);
+        mWeatherImageMap.put("눈", R.drawable.snow);
     }
 
     // 아이템의 갯수
@@ -82,7 +82,7 @@ public class MyFirstAdapter extends BaseAdapter {
         // 데이터 설정 => 홀더에 저장
         holder.cityText.setText(weather.getCity());
         holder.tempText.setText(weather.getTemp());
-        holder.weatherImage.setImageResource(mWeatherImagaMap.get(weather.getWeather()));
+        holder.weatherImage.setImageResource(mWeatherImageMap.get(weather.getWeather()));
 
         return convertView;
     }

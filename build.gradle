@@ -7,13 +7,13 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:3.1.2'
         
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.google.gms:google-services:3.1.0'
-        classpath "io.realm:realm-gradle-plugin:3.5.0"
+        classpath 'com.google.gms:google-services:3.1.2'
+        classpath "io.realm:realm-gradle-plugin:5.0.0"
     }
 }
 
@@ -26,4 +26,19 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 27
+    minSdkVersion = 21
+    targetSdkVersion = 27
+
+    supportLibVersion = "27.1.1"
+    runnerVersion = "1.0.1"
+    rulesVersion = "1.0.1"
+    espressoVersion = "3.0.1"
+    archLifecycleVersion = "1.1.1"
+    archRoomVersion = "1.0.0"
+    playServiceVersion = "15.0.0"
+    constraintLayout = "1.1.0"
 }
