@@ -29,6 +29,14 @@
   - 텍스트뷰의 영역에서 '바'닥에 중력이 작용하는 것이지요.
   
   
+* 183쪽 소스 두 번째 액티비티의 paretActivityName 수정
+  - parentActivityName=".ChildActivity" -> parentActivityName=".parentActivity"
+
+
+* 189쪽 하단 단락에 Select에 S 누락
+  - elect Methods to ... -> Select Methods to
+  
+ 
 * 266쪽 12.3.3. 제목
   - 깅제 종료 및 실행 => 강제 종료 및 실행
   
