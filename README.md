@@ -23,6 +23,10 @@
 
 * 76쪽 스크린샷 수정
   - EditText가 가로로 꽉 차는 스크린샷이어야 함.
+  
+  
+* 107쪽 실행결과 이미지 밑에 "숫자만 입력하는 소프트 키보드"라고 주제 외의 말이 적혀있습니다.
+  - 삭제
 
 
 * 120쪽 닥 -> 바닥
@@ -57,8 +61,10 @@
  
 * 554쪽 Google Play services와 연결하기 부분 삭제 
   - 과거에는 위치정보를 얻기 위해 GoogleApiClient가 필요했었는데 최근에는 FusedLocationProvider를 사용하게 되면서 필요없게 되었기 때문에 해당 절은 필요 없는 부분입니다. 관련된 코드 또한 작성하지 않아도 됩니다.
-   
-   
+  
+* 738쪽 3번째 줄 에제 -> 예제
+
+
 * 774쪽 하단 표 '미세먼지 API 요청 기본 정보'의 Resource URI 수정 
   - http://api.weatherplanet.co.kr/~ 를 http://apis.skplanetx.com/~ 로 수정
   
