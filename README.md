@@ -52,6 +52,9 @@
 * 282쪽 액티비티에서 프래그먼트에 접근하는 예 코드에서
   - getFragmentManager() => getSupportFragmentManager() 로 수정
   
+* 293쪽 // 종료처리 코드 누락
+  - getActivity().finish();
+
 * 369쪽 상단 소스 제목
   - [ContentResolver를 통해 데이터를 얻는 예]
   
