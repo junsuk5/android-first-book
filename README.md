@@ -57,8 +57,14 @@
   
 * 310쪽 상단 스크린샷 패키지명이 다른게 들어가 있음
 
+* 355쪽 중간에 오타
+  - BroadcastReciever => BroadcastReceiver
+
 * 369쪽 상단 소스 제목
   - [ContentResolver를 통해 데이터를 얻는 예]
+  
+* 379쪽 하단 path -> uri 로 수정
+  - imageView.setImageURI(Uri.parse(uri));
   
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
