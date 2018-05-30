@@ -15,6 +15,12 @@
 * [유튜브](https://www.youtube.com/playlist?list=PLxTmPHxRH3VWTd-8KB67Itegihkl4SVKe)
 * [페이스북](https://www.facebook.com/untilandroid)
 
+## 33장 미세먼지 앱 관련 중요 변경사항
+
+책 출간 이후에 서비스 제공처가 변경되어 API요청주소는 http://apis.skplanetx.com/ 에서 http://api.weatherplanet.co.kr/ 로 변경되었습니다.
+앱키는 6b200e091d1a4d7e83fb9b4732809b33를 사용합니다. (일일 500회 요청 제한)
+
+
 ## 오탈자 및 오류, 변경사항
 
 * 오류 페이지 관련 공지
