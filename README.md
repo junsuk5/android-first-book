@@ -72,6 +72,9 @@
 * 379쪽 하단 path -> uri 로 수정
   - imageView.setImageURI(Uri.parse(uri));
   
+* 427쪽 아래 예제 
+  - mAdapter = new MemoAdapter(this, cursor) -> mAdapter = new MemoAdapter(this, getMemoCursor())
+  
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
 
