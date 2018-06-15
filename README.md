@@ -15,6 +15,11 @@
 * [유튜브](https://www.youtube.com/playlist?list=PLxTmPHxRH3VWTd-8KB67Itegihkl4SVKe)
 * [페이스북](https://www.facebook.com/untilandroid)
 
+## 강의 교안 슬라이드
+구글 드라이브로 작성한 강의 교안입니다. PDF, PPT 등으로 다운 받아 사용하실 수 있습니다.
+* http://bit.ly/2qvySfw
+
+
 ## 33장 미세먼지 앱 관련 중요 변경사항
 
 책 출간 이후에 서비스 제공처가 변경되어 API요청주소는 http://apis.skplanetx.com/ 에서 http://api.weatherplanet.co.kr/ 로 변경되었습니다.
