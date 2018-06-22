@@ -89,8 +89,14 @@
 * 554쪽 Google Play services와 연결하기 부분 삭제 
   - 과거에는 위치정보를 얻기 위해 GoogleApiClient가 필요했었는데 최근에는 FusedLocationProvider를 사용하게 되면서 필요없게 되었기 때문에 해당 절은 필요 없는 부분입니다. 관련된 코드 또한 작성하지 않아도 됩니다.
   
-* 614쪽 상단 소스 두번재 줄
+* 576쪽 밑에서 두 번째
+  - Open ediotr -> Open editor
+  
+* 614쪽 상단 소스 두 번째 줄
   - LinearLayoutManager.VERTICAL -> GridLayoutManager.VERTICAL
+  
+* 640쪽 밑에서 두 번째 줄
+  - 위과 -> 위와
   
 * 738쪽 3번째 줄 에제 -> 예제
 
