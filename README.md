@@ -39,11 +39,14 @@
 * 107쪽 실행결과 이미지 밑에 "숫자만 입력하는 소프트 키보드"라고 주제 외의 말이 적혀있습니다.
   - 삭제
 
-* 117쪽 5번째 줄 layout_weigth -> layout_weight 
+* 117쪽 5번째 줄
+  - layout_weigth -> layout_weight 
 
 * 120쪽 닥 -> 바닥
   - 텍스트뷰의 영역에서 '바'닥에 중력이 작용하는 것이지요.
   
+* 143쪽 맨밑에서 3번째줄에
+  - appcombat -> appcompat
   
 * 183쪽 소스 두 번째 액티비티의 paretActivityName 수정
   - parentActivityName=".ChildActivity" -> parentActivityName=".parentActivity"
