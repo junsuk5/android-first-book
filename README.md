@@ -58,7 +58,8 @@
  
 * 233쪽 하단 소스에 오타
   - mWeatherImagaMap -> mWeatherImageMap 으로 수정
-  
+
+* 256쪽 소스파일제외 맨밑에서 4번째줄 ImageView. SetImageDrawable 점과 Set 사이에 공백 하나가 있음
  
 * 266쪽 12.3.3. 제목
   - 깅제 종료 및 실행 => 강제 종료 및 실행
