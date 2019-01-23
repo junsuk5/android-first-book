@@ -81,8 +81,15 @@
 * 379쪽 하단 path -> uri 로 수정
   - imageView.setImageURI(Uri.parse(uri));
   
+* 414쪽 밑에서 두 번째 줄 delete 실패시 반환 값
+  - -1을 반환 => 0을 반환
+  
 * 427쪽 아래 예제 
   - mAdapter = new MemoAdapter(this, cursor) -> mAdapter = new MemoAdapter(this, getMemoCursor())
+
+* 465쪽 22.2.2절 HttpURLConnect 띄어쓰기 오타
+
+* 472쪽 3번째줄 MainActivity. java 띄어쓰기 오타
   
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
