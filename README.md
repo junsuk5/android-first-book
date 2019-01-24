@@ -73,6 +73,9 @@
   
 * 310쪽 상단 스크린샷 패키지명이 다른게 들어가 있음
 
+* 345쪽 맨아래줄에서 바로윗줄 
+  - Specific Resion Only -> Specific Region Only
+
 * 355쪽 중간에 오타
   - BroadcastReciever => BroadcastReceiver
 
@@ -81,7 +84,10 @@
   
 * 379쪽 하단 path -> uri 로 수정
   - imageView.setImageURI(Uri.parse(uri));
-  
+
+* 399쪽 내용중 첫째줄에 new DownloadFilesTask()~~ 이 부분
+  - DownloadFilesTask() -> DownloadTask()
+
 * 414쪽 밑에서 두 번째 줄 delete 실패시 반환 값
   - -1을 반환 => 0을 반환
   
@@ -107,8 +113,8 @@
 * 614쪽 상단 소스 두 번째 줄
   - LinearLayoutManager.VERTICAL -> GridLayoutManager.VERTICAL
   
-* 640쪽 밑에서 두 번째 줄
-  - 위과 -> 위와
+* 641쪽 밑에서 두 번째 줄
+  - 위과 같은 인턴트 필터를 -> 위와 같은 인텐트 필터를
   
 * 738쪽 3번째 줄 에제 -> 예제
 
