@@ -110,6 +110,8 @@
 * 465쪽 22.2.2절 HttpURLConnect 띄어쓰기 오타
 
 * 472쪽 3번째줄 MainActivity. java 띄어쓰기 오타
+
+* 479쪽 소스 코드내의 "fullname": "Bob" 라인 모두 삭제
   
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
