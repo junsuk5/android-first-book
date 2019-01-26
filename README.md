@@ -113,6 +113,9 @@
 
 * 479쪽 소스 코드내의 "fullname": "Bob" 라인 모두 삭제
   
+* 512쪽 6번째 줄
+  - onPause() => onStop()
+  
 * 537쪽 상단 문단
   - getBraodCast() => getBroadcast() 로 수정
   
