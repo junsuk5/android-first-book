@@ -112,6 +112,9 @@
 * 472쪽 3번째줄 MainActivity. java 띄어쓰기 오타
 
 * 479쪽 소스 코드내의 "fullname": "Bob" 라인 모두 삭제
+
+* 508 페이지 밑에서 2번째줄 
+  - startForegroudnService() -> startForegroundService() 
   
 * 512쪽 6번째 줄
   - onPause() => onStop()
