@@ -41,23 +41,22 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
         // 클릭 이벤트
         if (mListener != null) {
             // 현재 위치
-            final int pos = holder.getAdapterPosition();
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mListener.onItemClicked(pos);
+                    mListener.onItemClicked(holder.getAdapterPosition());
                 }
             });
             holder.share.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mListener.onShareButtonClicked(pos);
+                    mListener.onShareButtonClicked(holder.getAdapterPosition());
                 }
             });
             holder.more.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mListener.onLearnMoreButtonClicked(pos);
+                    mListener.onLearnMoreButtonClicked(holder.getAdapterPosition());
                 }
             });
         }
