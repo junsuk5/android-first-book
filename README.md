@@ -133,6 +133,10 @@
   
 * 614쪽 상단 소스 두 번째 줄
   - LinearLayoutManager.VERTICAL -> GridLayoutManager.VERTICAL
+
+* 615쪽 소스코드 중간
+  - final int pos = position; -> 삭제
+  - setOnClickListener 세 군데에서 쓰는 pos -> holder.getAdapterPosition();
   
 * 616쪽 본문 두번째줄에 
   - 태그를 정의하였 습니다. (띄어쓰기 오타) -> 태그를 정의하였습니다.
