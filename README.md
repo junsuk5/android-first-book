@@ -109,6 +109,9 @@
 
 * 465쪽 22.2.2절 HttpURLConnect 띄어쓰기 오타
 
+* 465쪽 22.2.2절 내용과 소스코드 : 구글 URL줄임 서비스 종료로 URL 변경
+  - https://goo.gl/eIXu9I 를 http://bit.ly/2OChQYV 로 수정
+
 * 472쪽 3번째줄 MainActivity. java 띄어쓰기 오타
 
 * 479쪽 소스 코드내의 "fullname": "Bob" 라인 모두 삭제
