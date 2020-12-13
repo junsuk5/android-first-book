@@ -9,7 +9,8 @@
 * [인터파크](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=281409749&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
 ## 예제 코드 실행 방법
-하나의 프로젝트에 예제가 각각의 모듈로 되어있습니다. 안드로이드 스튜디오에서 프로젝트를 Open하고 실행하고 싶은 모듈을 선택하여 실행합니다.
+하나의 프로젝트에 예제가 각각의 모듈로 되어있습니다. 안드로이드 스튜디오에서 프로젝트를 Open하고 실행하고 싶은 모듈을 안드로이드 스튜디오 상단의 에뮬레이터(기기) 좌측 모듈 선택 옵션 메뉴로부터 선택하여 실행합니다.
+Android Studio 4.1.1, Gradle 6.5에서 빌드가 됨을 확인하였습니다.
 
 ## 예제 라이브 코딩 및 A/S
 * [유튜브](https://www.youtube.com/playlist?list=PLxTmPHxRH3VWTd-8KB67Itegihkl4SVKe)
