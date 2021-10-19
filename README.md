@@ -9,7 +9,7 @@
 * [인터파크](http://book.interpark.com/product/BookDisplay.do?_method=detail&sc.shopNo=0000400000&sc.prdNo=281409749&sc.saNo=003002001&bid1=search&bid2=product&bid3=title&bid4=001)
 
 ## 예제 코드 실행 방법
-하나의 프로젝트에 예제가 각각의 모듈로 되어있습니다. 안드로이드 스튜디오에서 프로젝트를 Open하고 setting.gradle 파일(https://github.com/junsuk5/android-first-book/blob/3401414de065ac0268c8df15aa971d950e83f7d8/settings.gradle)에서 실행하고 싶은 예제 모듈만 남기고 실행합니다.
+하나의 프로젝트에 예제가 각각의 모듈로 되어있습니다. 안드로이드 스튜디오에서 프로젝트를 Open하고 setting.gradle 파일(https://github.com/junsuk5/android-first-book/blob/3401414de065ac0268c8df15aa971d950e83f7d8/settings.gradle) 에서 실행하고 싶은 예제 모듈만 남기고 실행합니다.
 전체를 로드하면 후반부 Firebase 예제의 경우 google-services.json 파일이 필요하기 때문에 빌드가 실패합니다.
 Android Studio Arctic Fox에서 빌드가 됨을 확인하였습니다.
 
